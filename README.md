@@ -2,8 +2,15 @@
 ![Nuget](https://img.shields.io/nuget/v/BetterFloatMenu)
 ![GitHub](https://img.shields.io/github/license/Epicguru/BetterFloatMenu)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Epicguru/BetterFloatMenu/master)
+
+<div>
+    <img src="Images/Search2.png" width="40%" height="40%">
+    <img src="Images/Search1.png" width="30%" height="30%">
+    <img src="Images/Icons.png" width="25%" height="25%">
+<div>
+    
 ## Why it exists
-Rimworld has the `FloatMenu` utility, which is essentially a dropdown. It is used in both gameplay and menus. However, with many mods installed, these menus can become far too large and very difficult to read and navigate as a user.
+Rimworld has the `FloatMenu` utility, which is essentially a dropdown. It is used in both gameplay and menus. However, with many mods installed, these menus can become far too large and very difficult to read and navigate as a user. As a mod author, you may need large dropdown menus, but the FloatMenu just isn't good enough.
 This BetterFloatMenu provides a very similar API as the regular FloatMenu, but offers a better UI, including a search bar.
 
 ## Installation
@@ -66,5 +73,7 @@ window.resizeable = true;
 window.CanSearch = true;
 ```
 
+![](Images/TutorialMenu.png)
+    
 That is almost all there is to using this utility. There are quite a few customization options in the `BetterFloatMenu` class - please explore the API to understand them.
 The code is well documented, and should be easy to understand.
