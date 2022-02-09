@@ -13,16 +13,14 @@ jobs:
     steps:
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
-       
+      
+    - name: Restore NuGet Packages       
     - uses: actions/checkout@master
     - uses: nuget/setup-nuget@v1
       with:
         nuget-api-key: ${{secrets.NUGET_API}}
         nuget-version: '5.x'
-    - run: nuget restore MyProject.sln
-      
-    - name: Restore NuGet Packages
-      run: nuget restore BetterFloatMenu.sln    
+    - run: nuget restore BetterFloatMenu.sln
 
     - name: Build app for release
       run: msbuild BetterFloatMenu\BetterFloatMenu.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
