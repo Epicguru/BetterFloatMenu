@@ -2,6 +2,9 @@ on:
   push:  
     branches: [ master ]
   
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
 jobs:  
   build:  
   
@@ -11,8 +14,12 @@ jobs:
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
        
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+    - uses: actions/checkout@master
+    - uses: nuget/setup-nuget@v1
+      with:
+        nuget-api-key: ${{secrets.NUGET_API}}
+        nuget-version: '5.x'
+    - run: nuget restore MyProject.sln
       
     - name: Restore NuGet Packages
       run: nuget restore BetterFloatMenu.sln    
