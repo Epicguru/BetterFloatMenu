@@ -8,18 +8,17 @@ jobs:
     runs-on: windows-latest
  
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
        
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
       
     - name: Restore NuGet Packages
       run: nuget restore BetterFloatMenu.sln    
-      
-    - name: Build
-      run: msbuild BetterFloatMenu.sln  /p:Configuration=Debug
+
+    - name: Build app for release
+      run: msbuild BetterFloatMenu\BetterFloatMenu.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
       
     - name: Publish
       run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API}}
