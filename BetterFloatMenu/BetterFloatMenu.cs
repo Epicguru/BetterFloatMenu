@@ -121,7 +121,7 @@ namespace EpicUtils
             if (Items == null || Items.Count == 0)
             {
                 Log.Message($"Opened a {nameof(BetterFloatMenu)} with no items! Closing...");
-                Close();
+                Close(); 
                 return;
             }
 
