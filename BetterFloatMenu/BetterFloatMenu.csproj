@@ -12,7 +12,7 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <FileVersion>1.1.0.0</FileVersion>
 
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>BetterFloatMenu</PackageId>
     <Authors>Epicguru</Authors>
     <Company>Epicguru</Company>
