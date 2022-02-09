@@ -1,6 +1,7 @@
 on:  
   push:  
-    branches: [ master ]
+    branches:
+     - master
   
 env:
   ACTIONS_ALLOW_UNSECURE_COMMANDS: true
