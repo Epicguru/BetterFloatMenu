@@ -33,4 +33,4 @@ jobs:
       run: msbuild BetterFloatMenu/BetterFloatMenu.csproj /p:Configuration=Debug
       
     - name: Publish
-      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API}}
+      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
