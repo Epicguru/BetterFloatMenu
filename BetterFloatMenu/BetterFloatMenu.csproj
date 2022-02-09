@@ -6,10 +6,11 @@
     <NoStdLib>true</NoStdLib>
     <LangVersion>preview</LangVersion>
     <RootNamespace>EpicUtils</RootNamespace>
+    <AssemblyName>0BetterFloatMenu</AssemblyName>
 
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
 
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageId>BetterFloatMenu</PackageId>
@@ -21,7 +22,7 @@
     <PackageProjectUrl>https://github.com/Epicguru/BetterFloatMenu</PackageProjectUrl>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageTags>Rimworld Mod UI Menu</PackageTags>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Change assembly name to load more consistently.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
