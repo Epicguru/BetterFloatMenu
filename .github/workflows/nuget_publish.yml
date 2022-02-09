@@ -5,28 +5,32 @@ on:
   
 env:
   ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-
-jobs:  
-  build:  
   
-    runs-on: windows-latest
- 
-    steps:
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.1
-      
-    - name: Restore NuGet Packages       
-    - uses: actions/checkout@master
-    - uses: nuget/setup-nuget@v1
-      with:
-        nuget-api-key: ${{secrets.NUGET_API}}
-        nuget-version: '5.x'
-        
-    - name: Real Restore
-      run: nuget restore BetterFloatMenu.sln
+jobs:
+  build:
 
-    - name: Build app for release
-      run: msbuild BetterFloatMenu\BetterFloatMenu.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code.
+      uses: actions/checkout@v2
+          
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Setup Nuget
+      uses: Nuget/setup-nuget@v1.0.5
+
+    - name: Restore nuget packages
+      run: nuget restore BetterFloatMenu/BetterFloatMenu.csproj
+
+    - name: Build
+      run: msbuild BetterFloatMenu/BetterFloatMenu.csproj /p:Configuration=Debug
       
     - name: Publish
       run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API}}
