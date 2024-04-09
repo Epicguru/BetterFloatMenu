@@ -4,13 +4,13 @@
     <TargetFramework>net472</TargetFramework>
     <OutputType>Library</OutputType>
     <NoStdLib>true</NoStdLib>
-    <LangVersion>preview</LangVersion>
+    <LangVersion>latest</LangVersion>
     <RootNamespace>EpicUtils</RootNamespace>
     <AssemblyName>0BetterFloatMenu</AssemblyName>
 
-    <Version>1.2.0</Version>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
-    <FileVersion>1.2.0.0</FileVersion>
+    <Version>15.0.0</Version>
+    <AssemblyVersion>15.0.0</AssemblyVersion>
+    <FileVersion>15.0.0</FileVersion>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>BetterFloatMenu</PackageId>
@@ -33,9 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3510-beta">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4060-beta" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
