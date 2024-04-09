@@ -161,9 +161,15 @@ namespace EpicUtils
                     var pos = new Vector2(x, y);
                     var item = preRenderItems[index];
                     var size = item.Draw(pos);
-                    GUI.color = Color.white;
                     var area = new Rect(pos, size);
-                    Widgets.DrawBox(area);
+
+                    if (item.BoxThickness > 0 && item.BoxColor.a > 0)
+                    {
+                        GUI.color = item.BoxColor;
+                        Widgets.DrawBox(area, item.BoxThickness);
+                        GUI.color = Color.white;
+                    }
+
                     if (Widgets.ButtonInvisible(area))
                     {
                         OnSelected?.Invoke(item);
@@ -218,6 +224,14 @@ namespace EpicUtils
         /// User data.
         /// </summary>
         public object Payload { get; set; }
+        /// <summary>
+        /// The color of the containing box.
+        /// </summary>
+        public Color BoxColor = Color.white;
+        /// <summary>
+        /// The width, in pixels, of the containing box.
+        /// </summary>
+        public int BoxThickness = 1;
 
         /// <summary>
         /// Returns the <see cref="Payload"/>, cast to a specified type. May throw an invalid cast or null exception.

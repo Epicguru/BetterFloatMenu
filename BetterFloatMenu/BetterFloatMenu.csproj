@@ -8,9 +8,9 @@
     <RootNamespace>EpicUtils</RootNamespace>
     <AssemblyName>0BetterFloatMenu</AssemblyName>
 
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.2.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>BetterFloatMenu</PackageId>
@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="*">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3510-beta">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
