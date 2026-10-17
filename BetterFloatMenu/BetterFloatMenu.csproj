@@ -1,16 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <OutputType>Library</OutputType>
     <NoStdLib>true</NoStdLib>
     <LangVersion>latest</LangVersion>
     <RootNamespace>EpicUtils</RootNamespace>
     <AssemblyName>0BetterFloatMenu</AssemblyName>
 
-    <Version>16.0.0</Version>
-    <AssemblyVersion>16.0.0</AssemblyVersion>
-    <FileVersion>16.0.0</FileVersion>
+    <Version>17.0.0</Version>
+    <AssemblyVersion>17.0.0</AssemblyVersion>
+    <FileVersion>17.0.0</FileVersion>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>BetterFloatMenu</PackageId>
@@ -22,7 +22,7 @@
     <PackageProjectUrl>https://github.com/Epicguru/BetterFloatMenu</PackageProjectUrl>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageTags>Rimworld Mod UI Menu</PackageTags>
-    <PackageReleaseNotes>Change assembly name to load more consistently.</PackageReleaseNotes>
+    <PackageReleaseNotes>Update to Rimworld 1.7</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4495-beta" PrivateAssets="All" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.4979-alpha" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
